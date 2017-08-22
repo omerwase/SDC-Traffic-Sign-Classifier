@@ -28,8 +28,8 @@
 #### 2. [Traffic_Sign_Classifier.ipynb Notebook](https://github.com/omerwase/SDC_P2_Traffic_Sign_Classifier/blob/master/Traffic_Sign_Classifier.ipynb)
 #### 3. [IPython Notebook Report](https://github.com/omerwase/SDC_P2_Traffic_Sign_Classifier/blob/master/report.html)
 #### 4. [New German Traffic Sign Images](https://github.com/omerwase/SDC_P2_Traffic_Sign_Classifier/tree/master/new_traffic_signs/)
-
-
+  
+  
 ### Data Set Summary & Exploration
 
 #### 1. Dataset Summary
