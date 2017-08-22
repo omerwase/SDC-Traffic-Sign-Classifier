@@ -1,40 +1,32 @@
 # **Traffic Sign Recognition** 
 
-## Writeup Template
-
-### You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
+## Project Writeup
+### By:   Omer Waseem
+### Date: 2017-08-21
 
 ---
 
-**Build a Traffic Sign Recognition Project**
-
-The goals / steps of this project are the following:
-* Load the data set (see below for links to the project data set)
-* Explore, summarize and visualize the data set
-* Design, train and test a model architecture
-* Use the model to make predictions on new images
-* Analyze the softmax probabilities of the new images
-* Summarize the results with a written report
-
-
 [//]: # (Image References)
 
-[image1]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image1]: ./writeup_images/hist.jpeg "histogram of training data"
+[image2]: ./writeup_images/hist.jpeg "histogram of training data"
+[image3]: ./writeup_images/hist.jpeg "histogram of training data"
+[image4]: ./writeup_images/hist.jpeg "histogram of training data"
+[image5]: ./writeup_images/hist.jpeg "histogram of training data"
+[image6]: ./writeup_images/hist.jpeg "histogram of training data"
+[image7]: ./writeup_images/hist.jpeg "histogram of training data"
+[image8]: ./writeup_images/hist.jpeg "histogram of training data"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
 ---
-### Writeup / README
+### Files Submitted
 
-#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
+#### 1. [Project Writeup (this file](https://github.com/omerwase/SDC_P2_Traffic_Sign_Classifier/edit/master/README.md)
+#### 2. [Traffic_Sign_Classifier.ipynb Notebook](https://github.com/omerwase/SDC_P2_Traffic_Sign_Classifier/edit/master/Traffic_Sign_Classifier.ipynb)
+#### 3. [IPython Notebook Report](https://github.com/omerwase/SDC_P2_Traffic_Sign_Classifier/edit/master/report.html)
+#### 4. [New German Traffic Sign Images](https://github.com/omerwase/SDC_P2_Traffic_Sign_Classifier/edit/master/new_traffic_signs/)
 
 You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
