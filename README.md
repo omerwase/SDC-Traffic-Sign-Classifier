@@ -132,7 +132,7 @@ The model was able to correctly guess 4 of the 5 traffic signs, which gives an a
 
 The code for calculating the top 5 softmax probabilities is located in the 22nd cell of the IPython notebook.  
   
-The top 5 softmax probabilities for each image are listed below (respectively). The model is very certian in all its predictions, which seems odd. The reason for this is currently unknown, and any feedback on why this might be the cases would be appreciated. For the first image (which was incorrectly predicted) the 2nd highest softmax probability is for the correct label. However that 2nd probability of 0.0006 is much lower than the 1st and incorrect probability of 0.9993.
+The top 5 softmax probabilities for each image are listed below (respectively). The model is very certian in all its predictions, which seems odd. The reason for this is currently unknown, and any feedback on why this might be the case would be highly appreciated. For the first image (which was incorrectly predicted) the 2nd highest softmax probability is for the correct label. However that 2nd probability of 0.0006 is much lower than the 1st and incorrect probability of 0.9993.
   
 **Image 1 (Pedestrians):**  
 
