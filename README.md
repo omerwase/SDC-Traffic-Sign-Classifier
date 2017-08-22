@@ -8,14 +8,14 @@
 
 [//]: # (Image References)
 
-[image1]: ./writeup_images/hist.jpeg "histogram of training data"
-[image2]: ./writeup_images/hist.jpeg "histogram of training data"
-[image3]: ./writeup_images/hist.jpeg "histogram of training data"
-[image4]: ./writeup_images/hist.jpeg "histogram of training data"
-[image5]: ./writeup_images/hist.jpeg "histogram of training data"
-[image6]: ./writeup_images/hist.jpeg "histogram of training data"
-[image7]: ./writeup_images/hist.jpeg "histogram of training data"
-[image8]: ./writeup_images/hist.jpeg "histogram of training data"
+[image1]: ./writeup_images/sample_image_09.jpeg "Sample image (no passing)"
+[image2]: ./writeup_images/hist.jpeg "Histogram of training data"
+[image3]: ./writeup_images/hist.jpeg "Histogram of training data"
+[image4]: ./writeup_images/hist.jpeg "Histogram of training data"
+[image5]: ./writeup_images/hist.jpeg "Histogram of training data"
+[image6]: ./writeup_images/hist.jpeg "Histogram of training data"
+[image7]: ./writeup_images/hist.jpeg "Histogram of training data"
+[image8]: ./writeup_images/hist.jpeg "Histogram of training data"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -29,24 +29,28 @@
 #### 3. [IPython Notebook Report](https://github.com/omerwase/SDC_P2_Traffic_Sign_Classifier/blob/master/report.html)
 #### 4. [New German Traffic Sign Images](https://github.com/omerwase/SDC_P2_Traffic_Sign_Classifier/tree/master/new_traffic_signs/)
 
+
 ### Data Set Summary & Exploration
 
-#### 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
+#### 1. Dataset Summary
 
-I used the pandas library to calculate summary statistics of the traffic
-signs data set:
+The following stats about the dataset were calculated using numpy methods and attributes:
 
-* The size of training set is ?
-* The size of the validation set is ?
-* The size of test set is ?
-* The shape of a traffic sign image is ?
-* The number of unique classes/labels in the data set is ?
+* The size of training set is **34799** images
+* The size of the validation set is **4410** images
+* The size of test set is **12630** images
+* The shape of a traffic sign image is **(32, 32, 3)**
+* The number of unique classes/labels in the data set is **43**
 
-#### 2. Include an exploratory visualization of the dataset.
+#### 2. Exploratory Visualization
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
-
+Below is an example image from the dataset corresponding to a **No Passing** sign (label 9)
 ![alt text][image1]
+
+The historgram below shows the number of images for each class in the training dataset
+![alt text][image2]
+
+There is a large discrepancy between certian classes. For example label 0 has 180 examples (lowest) and label 2 has 2010 (highest). One possible enhancement to the training data would be to gather more images of traffic signs with few examples. **Note:** additional data was not generated for this project. Validation accuracy of **99.5%** and test accuracy of **97.9%** was achieved using only the dataset pictured above.
 
 ### Design and Test a Model Architecture
 
