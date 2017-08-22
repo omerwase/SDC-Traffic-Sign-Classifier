@@ -1,8 +1,7 @@
 # **Traffic Sign Recognition** 
 
 ## Project Writeup
-### By:   Omer Waseem
-### Date: 2017-08-21
+### Author:   Omer Waseem
 
 ---
 
