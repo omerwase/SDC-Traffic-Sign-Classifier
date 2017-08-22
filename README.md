@@ -21,7 +21,8 @@
 #### This project uses a CNN with 7 weighted layers (4 convolutional and 3 fully connected) to classify the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset) with 99.5% validation accuracy and 97.9% test accuracy.
 
 ---
-
+  
+  
 ### Files Submitted
 
 #### 1. [Project Writeup (this file)](https://github.com/omerwase/SDC_P2_Traffic_Sign_Classifier/blob/master/README.md)
