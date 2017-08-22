@@ -12,11 +12,11 @@
 [image2]: ./writeup_images/hist.jpeg "Histogram of training data"
 [image3]: ./writeup_images/before_hist_eq.jpeg "Before histogram equalization"
 [image4]: ./writeup_images/after_hist_eq.jpeg "After histogram equalization"
-[image5]: ./new_traffic_signs/001_27.jpeg "Downloaded image: pedestrians"
-[image6]: ./new_traffic_signs/002_25.jpeg "Downloaded image: road work"
-[image7]: ./new_traffic_signs/003_18.jpeg "Downloaded image: general caution"
-[image8]: ./new_traffic_signs/004_11.jpeg "Downloaded image: right of way at next intersection"
-[image9]: ./new_traffic_signs/005_13.jpeg "Downloaded image: yield"
+[image5]: ./new_traffic_signs/001_27.jpg "Downloaded image: pedestrians"
+[image6]: ./new_traffic_signs/002_25.jpg "Downloaded image: road work"
+[image7]: ./new_traffic_signs/003_18.jpg "Downloaded image: general caution"
+[image8]: ./new_traffic_signs/004_11.jpg "Downloaded image: right of way at next intersection"
+[image9]: ./new_traffic_signs/005_13.png "Downloaded image: yield"
 
 ## Description
 #### This project uses a CNN with 7 weighted layers (4 convolutional and 3 fully connected) to classify the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset) with **99.5%** validation accuracy and **97.9%** test accuracy.
@@ -108,7 +108,7 @@ To start, LeNet was used to classify the traffic signs which resulted in accurac
 
 #### 1. Acquiring New Images
 
-Below are the five downloaded images used to test network predictions:
+Below are the five downloaded images used to test network predictions:  
 ![alt text][image5] ![alt text][image6] ![alt text][image7] ![alt text][image8] ![alt text][image9]
 
 All of the images were cropped and resized to 32x32, so they can be fed directly into the network. These images are fairly clean, so it was expected that the network would predict them all accurately. It is worth noting that the first image of the pedestrian is flipped horizontally, when compared to images of the same class in the training dataset. As discussed below, this was the only image the model got wrong.
