@@ -56,32 +56,42 @@ There is a large discrepancy between certian classes. For example label 0 has 18
 #### 1. Preprocessing
 
 All images have two preprocessing methods applied to them:  
-* Histogram equalization: to increase the contrast in dark images. The example below is of a yield sign, before and after histogram equalization.  
+* i) Histogram equalization: to increase the contrast in dark images. The example below is of a yield sign, before and after histogram equalization.  
 ![alt text][image3]![alt text][image4]
-* Pixel scaling: all pixels are scale between -0.5 to 0.5 in order to better control numerical values through the network.
+* ii) Pixel scaling: all pixels are scale between -0.5 to 0.5 for numerical stability in the network.
   
-#### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
+#### 2. Model Architecture
 
-My final model consisted of the following layers:
+The final model consisted of the following layers:
 
-| Layer         		|     Description	        					| 
+| Layer         		    |     Description	        				            	| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x3 RGB image   							| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
-| RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64					|
-| Convolution 3x3	    | etc.      									|
-| Fully connected		| etc.        									|
-| Softmax				| etc.        									|
-|						|												|
-|						|												|
- 
+| Input         		    | 32x32x3 RGB image   				            			| 
+| Convolution 5x5     	| 1x1 stride, valid padding, outputs 28x28x32 	|
+| RELU					        |							                        					|
+| Dropout				        |							                        					|
+| Convolution 5x5     	| 1x1 stride, valid padding, outputs 24x24x64 	|
+| RELU					        |							                        					|
+| Dropout				        |							                        					|
+| Max pooling	      	  | 2x2 stride,  outputs 12x12x64				        	|
+| Convolution 5x5     	| 1x1 stride, valid padding, outputs 8x8x128   	|
+| RELU					        |							                        					|
+| Dropout				        |							                        					|
+| Convolution 5x5     	| 1x1 stride, valid padding, outputs 4x4x256  	|
+| RELU					        |							                        					|
+| Dropout				        |							                        					|
+| Flatten				        |	from 4x4x256 to 4096				         					|
+| Fully connected		    | input 4096, outputs 1024			                |
+| Fully connected		    | input 1024, outputs 256		  	                |
+| Fully connected		    | input 256, outputs 43 (logits)                |
+  
+#### 3. Model Architecture
+Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
+The logits from the model above and true one-hot-encoded labels were used to calculate the softmax cross entropy of the network predictions. The loss was determined by calculating the mean of the cross entropy, which was minimized through the Adam optimizer.
 
-#### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
-
-To train the model, I used an ....
-
+Network hyperparameters were tuned to achieve better accuracy. The best result was obtained with **500 epochs**, **batch size of 128**, and **learning rate of 0.0001**.  
+  
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
