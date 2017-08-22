@@ -109,15 +109,15 @@ To start, LeNet was used to classify the traffic signs which resulted in accurac
 #### 1. Acquiring New Images
 
 Below are the five downloaded images used to test network predictions:  
+  
 ![alt text][image5] ![alt text][image6] ![alt text][image7] ![alt text][image8] ![alt text][image9]
-
+  
 All of the images were cropped and resized to 32x32, so they can be fed directly into the network. These images are fairly clean, so it was expected that the network would predict them all accurately. It is worth noting that the first image of the pedestrian is flipped horizontally, when compared to images of the same class in the training dataset. As discussed below, this was the only image the model got wrong.
-
+  
 #### 2. Performance on New Images
-Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
-
+  
 Below are the model's predictions of the images above (respectively):
-
+  
 | Image			                        | Prediction	                        	  			| 
 |:---------------------------------:|:---------------------------------------------:| 
 | Pedestrians      	               	| Right-of-way at next intersection        			| 
@@ -125,23 +125,56 @@ Below are the model's predictions of the images above (respectively):
 | General caution					          | General caution											          |
 | Right-of-way at next intersection | Right-of-way at next intersection		         	|
 | Yield	      	                  	| Yield      						          	            |
-
-
+  
 The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This does not compare well to the test accuracy of 97.9%, the model was expected to have 100% accuracy. The one image the model got wrong was flipped horizontally compared to images of the same class in the training dataset. This is likely the reason for the wrong prediction. One possible way to mitigate these kinds of errors is to train the model on flipped images.
+  
+#### 3. Model Certainty - Softmax Probabilities
 
-#### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
-
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
-
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
-
-| Probability         	|     Prediction	        					| 
+The code for calculating the top 5 softmax probabilities is located in the 22nd cell of the IPython notebook.  
+  
+The top 5 softmax probabilities for each image are listed below (respectively). The model is very certian in all its predictions, which seems odd. The reason for this is currently unknown, and any feedback on why this might be the cases would be appreciated. For the first image (which was incorrectly predicted) the 2nd highest softmax probability is for the correct label. However that 2nd probability of 0.0006 is much lower than the 1st and incorrect probability of 0.9993.
+  
+Image 1: Pedestrians
+| Probability         	|     Prediction	        				            	| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
-
-
-For the second image ... 
+| 0.9993         		  	| Right-of-way at the next intersection   		 	| 
+| 6.467e-4     			  	| Pedestrians       								        		|
+| 7.211e-6					    | Dangerous curve to the left			            	|
+| 1.801e-6	      			| Double curve          			 	          			|
+| 1.108e-6				      | Beware of ice/snow                           	|
+  
+Image 2: Road work
+| Probability         	|     Prediction	        				            	| 
+|:---------------------:|:---------------------------------------------:| 
+| 0.9998         		  	| Road work   								                	| 
+| 2.064e-4     			  	| Beware of ice/snow								        		|
+| 9.754e-6					    | Traffic signals									            	|
+| 3.153e-6	      			| Speed limit (120km/h)				 	          			|
+| 2.126e-6				      | Right-of-way at the next intersection       	|
+  
+Image 3: General caution
+| Probability         	|     Prediction	        				            	| 
+|:---------------------:|:---------------------------------------------:| 
+| 1.000         		  	| General caution							                	| 
+| 2.599e-8     			  	| Pedestrians       								        		|
+| 3.241e-13					    | Right-of-way at the next intersection        	|
+| 1.473e-14	      			| Dangerous curve to the left 	          			|
+| 6.301e-16				      | No passing for vehicles over 3.5 metric tons 	|
+  
+Image 4: Right-of-way at next intersection
+| Probability         	|     Prediction	        				            	| 
+|:---------------------:|:---------------------------------------------:| 
+| 1.000         		  	| Right-of-way at the next intersection        	| 
+| 1.130e-9     			  	| Beware of ice/snow								        		|
+| 1.055e-10					    | Pedestrians   									            	|
+| 4.935e-12	      			| Double curve            		 	          			|
+| 3.377e-12				      | Vehicles over 3.5 metric tons prohibited     	|
+  
+Image 5: Yield
+| Probability         	|     Prediction	        				            	| 
+|:---------------------:|:---------------------------------------------:| 
+| 1.0000         		  	| Yield       								                	| 
+| 0.0     			      	| Speed limit (20km/h)							        		|
+| 0.0					          | Speed limit (30km/h)						            	|
+| 0.0	      		      	| Speed limit (50km/h)				 	          			|
+| 0.0   				        | Speed limit (60km/h)                         	|
