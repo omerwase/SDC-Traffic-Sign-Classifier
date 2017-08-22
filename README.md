@@ -87,9 +87,13 @@ The final model consisted of the following layers:
   
 #### 3. Model Architecture
   
-The logits from the model above and true one-hot-encoded labels were used to calculate the softmax cross entropy of the network predictions. The loss was determined by calculating the mean of the cross entropy, which was minimized through the Adam optimizer.
+The logits from the model above and true one-hot-encoded labels were used to calculate the softmax cross entropy of the network's predictions. The loss was determined by calculating the mean of the cross entropy, which was minimized through the Adam optimizer.
   
-Network hyperparameters were tuned to achieve better accuracy. The best result was obtained with **500 epochs**, **batch size of 128**, **learning rate of 0.0001**, and **dropout of 0.5**.  
+Network hyperparameters were tuned to achieve better accuracy. The best result was obtained with 
+* 500 epochs
+* 128 batch size
+* 0.0001 learning rate
+* 0.5 dropout
   
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
