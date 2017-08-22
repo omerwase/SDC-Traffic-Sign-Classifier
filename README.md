@@ -135,6 +135,7 @@ The code for calculating the top 5 softmax probabilities is located in the 22nd 
 The top 5 softmax probabilities for each image are listed below (respectively). The model is very certian in all its predictions, which seems odd. The reason for this is currently unknown, and any feedback on why this might be the cases would be appreciated. For the first image (which was incorrectly predicted) the 2nd highest softmax probability is for the correct label. However that 2nd probability of 0.0006 is much lower than the 1st and incorrect probability of 0.9993.
   
 Image 1 (Pedestrians):  
+
 | Probability         	|     Prediction	        				            	| 
 |:---------------------:|:---------------------------------------------:| 
 | 0.9993         		  	| Right-of-way at the next intersection   		 	| 
@@ -143,7 +144,8 @@ Image 1 (Pedestrians):
 | 1.801e-6	      			| Double curve          			 	          			|
 | 1.108e-6				      | Beware of ice/snow                           	|
   
-Image 2 (Road work):   
+Image 2 (Road work): 
+
 | Probability         	|     Prediction	        				            	| 
 |:---------------------:|:---------------------------------------------:| 
 | 0.9998         		  	| Road work   								                	| 
@@ -152,7 +154,8 @@ Image 2 (Road work):
 | 3.153e-6	      			| Speed limit (120km/h)				 	          			|
 | 2.126e-6				      | Right-of-way at the next intersection       	|
   
-Image 3 (General caution):  
+Image 3 (General caution): 
+
 | Probability         	|     Prediction	        				            	| 
 |:---------------------:|:---------------------------------------------:| 
 | 1.000         		  	| General caution							                	| 
@@ -162,6 +165,7 @@ Image 3 (General caution):
 | 6.301e-16				      | No passing for vehicles over 3.5 metric tons 	|
   
 Image 4 (Right-of-way at next intersection):  
+
 | Probability         	|     Prediction	        				            	| 
 |:---------------------:|:---------------------------------------------:| 
 | 1.000         		  	| Right-of-way at the next intersection        	| 
@@ -171,6 +175,7 @@ Image 4 (Right-of-way at next intersection):
 | 3.377e-12				      | Vehicles over 3.5 metric tons prohibited     	|
   
 Image 5 (Yield):  
+
 | Probability         	|     Prediction	        				            	| 
 |:---------------------:|:---------------------------------------------:| 
 | 1.0000         		  	| Yield       								                	| 
