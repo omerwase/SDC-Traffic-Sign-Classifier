@@ -18,7 +18,7 @@
 [image8]: ./writeup_images/hist.jpeg "Histogram of training data"
 
 ## Description
-#### This project uses a CNN with 7 weighted layers (4 convolutional and 3 fully connected) to classify the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset) with 99.5% validation accuracy and 97.9% test accuracy.
+#### This project uses a CNN with 7 weighted layers (4 convolutional and 3 fully connected) to classify the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset) with **99.5%** validation accuracy and **97.9%** test accuracy.
 
 ---
   
@@ -86,11 +86,10 @@ The final model consisted of the following layers:
 | Fully connected		    | input 256, outputs 43 (logits)                |
   
 #### 3. Model Architecture
-Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
-
+  
 The logits from the model above and true one-hot-encoded labels were used to calculate the softmax cross entropy of the network predictions. The loss was determined by calculating the mean of the cross entropy, which was minimized through the Adam optimizer.
-
-Network hyperparameters were tuned to achieve better accuracy. The best result was obtained with **500 epochs**, **batch size of 128**, and **learning rate of 0.0001**.  
+  
+Network hyperparameters were tuned to achieve better accuracy. The best result was obtained with **500 epochs**, **batch size of 128**, **learning rate of 0.0001**, and **dropout of 0.5**.  
   
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
