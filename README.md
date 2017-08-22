@@ -23,7 +23,7 @@
 ---
 ### Files Submitted
 
-#### 1. [Project Writeup (this file](https://github.com/omerwase/SDC_P2_Traffic_Sign_Classifier/edit/master/README.md)
+#### 1. [Project Writeup (this file)](https://github.com/omerwase/SDC_P2_Traffic_Sign_Classifier/edit/master/README.md)
 #### 2. [Traffic_Sign_Classifier.ipynb Notebook](https://github.com/omerwase/SDC_P2_Traffic_Sign_Classifier/edit/master/Traffic_Sign_Classifier.ipynb)
 #### 3. [IPython Notebook Report](https://github.com/omerwase/SDC_P2_Traffic_Sign_Classifier/edit/master/report.html)
 #### 4. [New German Traffic Sign Images](https://github.com/omerwase/SDC_P2_Traffic_Sign_Classifier/edit/master/new_traffic_signs/)
