@@ -44,10 +44,10 @@ The following stats about the dataset were calculated using numpy methods and at
 
 #### 2. Exploratory Visualization
 
-Below is an example image from the dataset corresponding to a **No Passing** sign (label 9)
+Below is an example image from the dataset corresponding to a **No Passing** sign (label 9):  
 ![alt text][image1]
 
-The historgram below shows the number of images for each class in the training dataset
+The historgram below shows the number of images for each class in the training dataset:  
 ![alt text][image2]
 
 There is a large discrepancy between certian classes. For example label 0 has 180 examples (lowest) and label 2 has 2010 (highest). One possible enhancement to the training data would be to gather more images of traffic signs with few examples. **Note:** additional data was not generated for this project. Validation accuracy of **99.5%** and test accuracy of **97.9%** was achieved using only the dataset pictured above.
