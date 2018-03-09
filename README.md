@@ -1,8 +1,5 @@
 # **Traffic Sign Recognition** 
 
-## Project Writeup
-### Author:   Omer Waseem
-
 ---
 
 [//]: # (Image References)
@@ -17,7 +14,6 @@
 [image8]: ./new_traffic_signs/004_11.jpg "Downloaded image: right of way at next intersection"
 [image9]: ./new_traffic_signs/005_13.png "Downloaded image: yield"
 
-## Description
 #### This project uses a CNN with 7 weighted layers (4 convolutional and 3 fully connected) to classify the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset) with **99.5%** validation accuracy and **97.9%** test accuracy.
 
 ---
